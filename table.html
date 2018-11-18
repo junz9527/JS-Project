@@ -1,0 +1,125 @@
+            <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <link rel="stylesheet" type="text/css" href="table.css" />
+    <link rel="stylesheet" type="text/css" href="div_pop.css" />
+    <script type="text/javascript" src="table.js"></script>
+</head>
+<body>
+    <div id="div_bg">
+    <div class="div_bar1">
+    <ul id="ul_search" class="status">
+        <li class="status">ID:&nbsp;<input id="input_search_id" class="input_search" title="根据ID进行搜索，输入后按Enter键"></li>
+        <li class="status">关键字:&nbsp;<input id="input_search_key" class="input_search" title="根据关键字进行搜索，输入后按Enter键"></li>
+        <li class="status">时间范围:&nbsp;<input id="input_search_time1" class="input_search">-<input id="input_search_time2" class="input_search"></li>
+    </ul>
+    </div>
+    <div class="div_bar1">
+    <ul id="ul_operation" class="status">
+        <li class="status"><a onclick="addUserPanel()">增加</a></li>
+        <li class="status"><a href="">删除</a></li>
+        <li class="status"><a href="">修改</a></li>
+    </ul>
+    </div>
+    <div class="div_bar1">
+    <ul id="ul_status" class="status">
+        <li class="status">总数:50</li>
+        <li class="status">页数:10</li>
+        <li class="status">每页显示:5</li>
+        <li class="status"><a href="">上一页</a></li>
+        <li class="status"><a href="">下一页</a></li>
+        <li class="status">跳转&nbsp;<input id="input_goto" title="请输入要跳转到哪一页，输入后按Enter键"></li>
+        <li class="status">当前页&nbsp;<label>1</label></li>
+    </ul>
+    </div>
+    <table border="1" width="800px" class="table_main">
+        <tbody>
+            <tr class="tr_main">
+                <th>id</th>
+                <th>username</th>
+                <th>realname</th>
+                <th>password</th>
+                <th>email</th>
+                <th>phone</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+    <div id="div_operate_panel">
+        <label>标签</label>
+        <form method="post" id="form_operate">
+            <table id="table_operate" class="table_o">
+                <tr>
+                    <td>username:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>realname:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>password:</td>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <td>email:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>phone:</td>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+
+            <ul>
+                <li><input type="reset" value="重置" ></li>
+            </ul>
+        </form>
+    </div>
+
+    </div>
+</body>
+</html>

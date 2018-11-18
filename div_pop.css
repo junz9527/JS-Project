@@ -1,0 +1,10 @@
+/*
+    弹出div的样式
+ */
+
+#div_pop_add {
+    border: 1px solid red;
+    width: 800px;
+    height: 600px;
+    margin: 10px;
+}
