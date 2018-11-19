@@ -5,7 +5,9 @@
     <title>表格</title>
     <link rel="stylesheet" type="text/css" href="table.css" />
     <link rel="stylesheet" type="text/css" href="div_pop.css" />
-    <script type="text/javascript" src="table.js"></script>
+    <script type="text/javascript" src="User.js" defer="defer"></script>
+    <script type="text/javascript" src="Count.js" defer="defer"></script>
+    <script type="text/javascript" src="table.js" defer="defer"></script>
 </head>
 <body>
     <div id="div_bg">
@@ -18,9 +20,9 @@
     </div>
     <div class="div_bar1">
     <ul id="ul_operation" class="status">
-        <li class="status"><a onclick="addUserPanel()">增加</a></li>
-        <li class="status"><a href="">删除</a></li>
-        <li class="status"><a href="">修改</a></li>
+        <li class="status"><a id="tab_add">增加</a></li>
+        <li class="status"><a id="tab_del">删除</a></li>
+        <li class="status"><a id="tab_upd">修改</a></li>
     </ul>
     </div>
     <div class="div_bar1">
@@ -32,10 +34,12 @@
         <li class="status"><a href="">下一页</a></li>
         <li class="status">跳转&nbsp;<input id="input_goto" title="请输入要跳转到哪一页，输入后按Enter键"></li>
         <li class="status">当前页&nbsp;<label>1</label></li>
+        <li class="status">选中行数&nbsp;<label id="num_selected">0</label></li>
     </ul>
     </div>
-    <table border="1" width="800px" class="table_main">
-        <tbody>
+    <div id="div_table">
+    <table border="1" width="800px" class="table_main" id="tb_content">
+        <tbody id="tb_body">
             <tr class="tr_main">
                 <th>id</th>
                 <th>username</th>
@@ -44,7 +48,8 @@
                 <th>email</th>
                 <th>phone</th>
             </tr>
-            <tr>
+
+            <tr onmouseenter="effect_in()" onmouseleave="effect_out()">
                 <td>1</td>
                 <td>zhangj</td>
                 <td>张俊</td>
@@ -85,38 +90,170 @@
                 <td>13360978879</td>
             </tr>
 
-        </tbody>
+            <tr>
+                <td>6</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
 
+            <tr>
+                <td>11</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>zhangj</td>
+                <td>张俊</td>
+                <td>123456</td>
+                <td>541285343@qq.com</td>
+                <td>13360978879</td>
+            </tr>
+
+        </tbody>
     </table>
+    </div>
+<!-- 操作的面板， 用于对数据进行增加，修改的操作-->
     <div id="div_operate_panel">
         <label>标签</label>
         <form method="post" id="form_operate">
             <table id="table_operate" class="table_o">
                 <tr>
+                    <td>id:</td>
+                    <td><input id="id" class="input_text" type="text"></td>
+                </tr>
+                <tr>
                     <td>username:</td>
-                    <td><input type="text"></td>
+                    <td><input id="username" class="input_text" type="text"></td>
                 </tr>
                 <tr>
                     <td>realname:</td>
-                    <td><input type="text"></td>
+                    <td><input id="realname" class="input_text" type="text"></td>
                 </tr>
                 <tr>
                     <td>password:</td>
-                    <td><input type="password"></td>
+                    <td><input id="password" class="input_text" type="password"></td>
                 </tr>
                 <tr>
                     <td>email:</td>
-                    <td><input type="text"></td>
+                    <td><input id="email" class="input_text" type="text"></td>
                 </tr>
                 <tr>
                     <td>phone:</td>
-                    <td><input type="text"></td>
+                    <td><input id="phone" class="input_text" type="text"></td>
                 </tr>
             </table>
+            <!-- 操作按钮栏 -->
+            <div class="div_bar2">
+                <ul id="ul_operation2" class="status">
+                    <li class="status"><input id="btn_add" type="button" value="新增"></li>
+                    <li class="status"><input id="btn_upd" type="button" value="更新"></li>
+                    <li class="status"><input type="reset" value="重置"></li>
+                </ul>
+            </div>
 
-            <ul>
-                <li><input type="reset" value="重置" ></li>
-            </ul>
         </form>
     </div>
 

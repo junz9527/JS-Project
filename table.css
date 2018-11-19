@@ -64,11 +64,13 @@ div{
     background-color: transparent;
     height: 1000px;
 }
+/* 右侧操作面板 */
 #div_operate_panel{
-    margin: 10px;
-    width: 800px;
-    height: 600px;
+    width: 580px;
+    height: 670px;
     border: 1px solid red;
+    float: left;
+    margin-left: 10px;
 }
 
 .div_bar1{
@@ -80,4 +82,15 @@ div{
     margin: 10px;
     border-spacing: 30px 30px
 }
-
+.div_bar2{
+    border: 0;
+}
+#div_table{
+    float: left;
+    height: 670px;
+    width: 810px;
+    overflow: auto;
+}
+.rowSelected{
+    background-color: #d0cdcd;
+}
