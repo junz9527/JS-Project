@@ -13,13 +13,15 @@ function init(){
         //将tr对应的一条数据封装大users数组中
         var uc1 = new UserCount(0, tr.childNodes[1].textContent, tr.childNodes[3].textContent, tr.childNodes[5].textContent, tr.childNodes[7].textContent, tr.childNodes[9].textContent, tr.childNodes[11].textContent);
         users.push(uc1);
+        tr.onmouseenter = effect_in;
+        tr.onmouseleave = effect_out;
         tr = tr.nextElementSibling;
     }
 
 }
 init();
 function effect_in(){
-    event.target.style.backgroundColor = "red";
+    event.target.style.backgroundColor = "gray";
 }
 function effect_out(){
     event.target.style.backgroundColor = "";
@@ -106,9 +108,15 @@ function addRow(){
         tr.appendChild(td5)
 
         tb_body.appendChild(tr);
+
+        //新增完后，重新执行init，将数据添加交互效果
+        init();
     }
 }
 
 //指定事件处理程序
 var btn_add = document.getElementById("btn_add");
 btn_add.onclick =  addRow;
+
+//id 对应的是input输入框，当失去焦点的时候应该判断，id是否存在
+document.getElementById("id").onblur = judge_id;

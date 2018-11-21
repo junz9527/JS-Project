@@ -29,7 +29,16 @@
     <ul id="ul_status" class="status">
         <li class="status">总数:50</li>
         <li class="status">页数:10</li>
-        <li class="status">每页显示:5</li>
+        <li class="status">每页显示:
+            <select id="show_count" title="选择每页显示的条目数">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+        </li>
         <li class="status"><a href="">上一页</a></li>
         <li class="status"><a href="">下一页</a></li>
         <li class="status">跳转&nbsp;<input id="input_goto" title="请输入要跳转到哪一页，输入后按Enter键"></li>
@@ -223,6 +232,7 @@
                 <tr>
                     <td>id:</td>
                     <td><input id="id" class="input_text" type="text"></td>
+                    <td id="id_desc"></td>
                 </tr>
                 <tr>
                     <td>username:</td>

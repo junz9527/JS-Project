@@ -92,5 +92,12 @@ div{
     overflow: auto;
 }
 .rowSelected{
-    background-color: #d0cdcd;
+    background-color: red;
+}
+
+.input_desc_red{
+    color: red;
+}
+.input_desc_green{
+    color: green;
 }
