@@ -11,7 +11,7 @@ function init(){
     while(tr != null){
         tr.onclick = select_effect;
         //将tr对应的一条数据封装大users数组中
-        var uc1 = new UserCount(0, tr.childNodes[1].textContent, tr.childNodes[3].textContent, tr.childNodes[5].textContent, tr.childNodes[7].textContent, tr.childNodes[9].textContent, tr.childNodes[11].textContent);
+        var uc1 = new UserCount(0, tr.children[0].innerText, tr.children[1].innerText, tr.children[2].innerText, tr.children[3].innerText, tr.children[4].innerText, tr.children[5].innerText);
         users.push(uc1);
         tr.onmouseenter = effect_in;
         tr.onmouseleave = effect_out;
@@ -114,6 +114,13 @@ function addRow(){
     }
 }
 
+//ajax请求 用户数据， 并填充表格
+function getUsers(){
+    var xhr = createXHR();
+
+    xhr.open("get", "")
+
+}
 //指定事件处理程序
 var btn_add = document.getElementById("btn_add");
 btn_add.onclick =  addRow;
